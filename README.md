@@ -25,6 +25,10 @@ typescript 实现爬虫工具
 
 12、npm install concurrently -D
 
+13、npm install express --save
+
+14、npm install cookie-session --save
+
 
 设计模式和组合模式
 "dev": "ts-node ./src/crowller.ts",
