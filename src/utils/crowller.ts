@@ -8,7 +8,7 @@ export interface AnalyzerType {
     analyze: (html: string, filePath: string) => string;
 }
 class Crowller {
-    private filePath =  path.resolve(__dirname, '../data/course.json');
+    private filePath =  path.resolve(__dirname, '../../data/course.json');
     
     private async getRowHtml() {
         const result = await superagent.get(this.url);
@@ -28,7 +28,9 @@ class Crowller {
         this.initSpiderProcess();
     }
 }
-const secret = 'x3b174jsx';
-const  url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
-const abalyzer = Analyzer.getInstance();
-new Crowller(url,abalyzer); 
+export default Crowller;
+
+// const secret = 'x3b174jsx';
+// const  url = `http://www.dell-lee.com/typescript/demo.html?secret=${secret}`;
+// const abalyzer = Analyzer.getInstance();
+// new Crowller(url,abalyzer); 
